@@ -1,0 +1,64 @@
+% main.tex
+\documentclass[10pt,a4paper]{ctexbook}
+\usepackage{makeidx} % 调用 makeidx 宏包，用来处理索引
+\usepackage{tabto}
+\usepackage{tikz}                   % 绘制图形
+\usepackage{tikz-3dplot}            % 绘制三维坐标系，坐标变换
+\usepackage{siunitx}
+% \makeindex % 开启索引的收集
+
+\title{沪教版高中数学讲义} 
+\author{ 郑振宇\thanks{邮箱:coyatzheng@gmail.com}}
+\date{\today}
+
+
+\begin{document}
+\setlength{\parindent}{0em}
+
+
+\maketitle
+
+
+
+\chapter{集合与逻辑}
+ssss
+\chapter{等式和不等式}
+
+\section{等式的性质与方程的解集}
+\begin{enumerate}
+    \item 等式的性质
+    \begin{enumerate}
+        \item 传递性 \NumTabs{16} 设$a,b$均为实数,如果$a=b$，且$b=c$，那么$a=c$ 
+        \item 加法性质 \NumTabs{16} 设$a,b$均为实数,那么$a+c=b+c$ 
+        \item 乘法性质 \NumTabs{16} 设$a,b$均为实数,那么$ac=bc$ 
+    \end{enumerate}
+    \item 方程的解集 \quad  含有未知数的等式称为方程.使得方程两端相等的未知数的值，称为方程的解或者方程的根。
+    以方程的解为元素所构成的集合称为方程的解集。
+\end{enumerate}
+
+\section{一元二次方程的解集及根与系数的关系}
+
+1、概念：形如 $ax^2+bx+c,(a \ne 0)$ 的方程为一元二次方程；\par
+2、配方法：对一元二次方程进行配方得到方程：$(x + \frac{b}{2a})^2 = \frac{b^2-4ac}{4a^2} $ \par
+3、判别式$\Delta$ \par
+从配方之后的方程可以看出：原方程有没有解，取决于代数式$ b^2-4ac $的正负；基于$ b^2-4ac $的重要性，令称为该一元二次方程的判别式，它决定了一元二次方程解的个数问题；\par
+（1）若$\Delta > 0$，原方程有两个不等的实数根，这两个根是$ x_1 = \frac{-b+\sqrt{b^2-4ac}}{2a} , x_2 = \frac{-b-\sqrt{b^2-4ac}}{2a}$；\par
+（2）若$\Delta = 0$，原方程有两个相等的实数根，$ x_1 = x_2 = -\frac{b}{2a}$；\par
+（3）若$\Delta < 0$，原方程没有实根；\par
+4、韦达定理\par
+当上述一元二次方程有实数解时，$ x_1 = \frac{-b+\sqrt{b^2-4ac}}{2a} , x_2 = \frac{-b-\sqrt{b^2-4ac}}{2a}$ \par
+则：$$ x_1+x_2=\frac{-b+\sqrt{\Delta}}{2a}+\frac{-b-\sqrt{\Delta}}{2a}=-\frac{b}{a}$$
+$$ x_1 \cdot x_2=\frac{-b+\sqrt{b^2-4ac}}{2a} \cdot \frac{-b-\sqrt{b^2-4ac}}{2a}=\frac{c}{a}$$
+
+注意：在现在所学范围下，使用韦达定理时，需判别$\Delta = b^2-4ac \ge 0 $. \par
+特别的：
+$$x_1^2+x_2^2 = (x_1+x_2)^2-2x_1x_2 \qquad \qquad \frac{1}{x_1}+\frac{1}{x_2} = \frac{x_1+x_2}{x_1x_2}$$
+$$(x_1-x_2)^2 = (x_1+x_2)^2-4x_1x_2 \qquad \qquad | x_1-x_2 | = \sqrt{(x_1+x_2)^2-4x_1x_2}$$
+一元二次方程的两根之差的绝对值$| x_1-x_2 | = \frac{\sqrt{\Delta}}{|a|}$
+
+
+
+\section{不等式的求解1}
+一元一次不等式组\par
+
+\end{document}
