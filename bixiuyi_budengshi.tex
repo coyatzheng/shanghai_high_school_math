@@ -9,6 +9,36 @@
 \usepackage{amsmath}
 \usepackage{geometry}
 \usepackage{pgfplots}
+\usepackage{tcolorbox}
+
+\usepackage{tcolorbox}
+\usepackage{colortbl}
+\usepackage{geometry}
+
+
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{mathdots}
+\usepackage{yhmath}
+\usepackage{cancel}
+\usepackage{color}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{tabularx}
+\usepackage{extarrows}
+\usepackage{booktabs}
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
+
+
+\input{base}
+
 
 \geometry{a4paper,hmargin=0.8in,vmargin=0.7in} %设置上下左右边距
 
@@ -18,6 +48,7 @@
 
 
 \begin{document}
+\newtheorem{problem}{例}[section]
 \setlength{\parindent}{0em}
 
 
@@ -62,7 +93,7 @@ $$(x_1-x_2)^2 = (x_1+x_2)^2-4x_1x_2 \qquad \qquad | x_1-x_2 | = \sqrt{(x_1+x_2)^
 {一元二次方程的两根之差的绝对值$\displaystyle | x_1-x_2 | =  \frac{\sqrt{\Delta}}{|a|}$\par}
 
 
-
+\clearpage
 \section{第6课\quad 不等式的求解1}
 考点一、一元一次不等式组求解\par
 （同大取大，同小取小，大小交叉中间找，大大小小没有解）
@@ -150,9 +181,12 @@ f(n) > 0
 \right. 
 $
 
-
+\clearpage
 \section{第7课\quad 不等式的求解2}
-考点一、分式不等式的解法\par
+
+\begin{formal}
+    {\large \textbf{知识点一、分式不等式的解法}}
+\end{formal}
 1、定义：型如$\displaystyle \frac{f(x)}{\varphi(x)}>0$或$\displaystyle \frac{f(x)}{\varphi(x)}<0$，（其中$f(x),\varphi(x)$为整式且$\varphi(x)\ne 0$）的不等式称为分式不等式.\par
 2、解法\par
 \begin{enumerate}
@@ -180,8 +214,10 @@ $
     $\par
 
 \end{enumerate}
+\begin{formal}
+    {\large \textbf{知识点二、一元高次不等式的解法--穿针引线 [补充内容]}}
+\end{formal}
 
-考点二、一元高次不等式的解法--穿针引线 [补充内容]\par
 \begin{enumerate}
     \item 分解成若干个一次因式的积，并使每一个因式中最高次项的系数为正;
     \item 将每一个一次因式的根标在数轴上，从最大根的右上方依次通过每一点画曲线；并注意奇穿偶不穿；
@@ -199,7 +235,10 @@ $
 
 \end{enumerate}
 
-考点三、含绝对值不等式的解法
+\begin{formal}
+    {\large \textbf{知识点三、含绝对值不等式的解法}}
+\end{formal}
+
 \begin{enumerate}
     \item 最简单的绝对值不等式的同解变形;
     $$
@@ -211,9 +250,73 @@ $
     \item 不等式$ |x|<a\ (a>0)$的解集就是求在数轴上到原点的距离小于$a$的点对应的实数$x$的集合．
 
 \end{enumerate}
-
+\clearpage
 \section{第8课\quad 基本不等式及其应用}
-考点一、平均值不等式
+
+\begin{formal}
+    {\large \textbf{知识点一、平均值不等式}}
+\end{formal}
+
+
+\begin{enumerate}
+    \item 对于正数$a,b$称$\displaystyle \frac{a+b}{2}\text{是}a,b\text{的算数平均值，并称}\sqrt{ab}\text{是}a,b\text{的几何平均值}$
+
+    \item {\large{\textbf{平均值不等式:}}}\ 两个正数的算术平均值大于等于它们的几何平均值，即对于任意的正数，有
+    $$
+    \frac{a+b}{2}\ge \sqrt{ab},\ (a>0,b>0)
+    $$
+    当且仅当$a=b$是等号成立\\
+    \\
+    {\large{\textbf{三注意:}}}\\
+    {\large{\textbf{“一正”：}}}不等式中的各项必须都是正数; \\
+    {\large{\textbf{“二定”：}}}和定积最大，积定和最小； \\
+    {\large{\textbf{“三相等”：}}}只有满足了不等式中等号成立的条件，才能使用基本不等式求最值．\\
+    \item 平均值不等式的变式与推广
+    \begin{enumerate}
+        \item 加权平均$\ge$ 算术平均$\ge$ 几何平均：$\displaystyle \sqrt{\frac{a^2+b^2}{2}}\ge \frac{a+b}{2} \ge \sqrt{ab} , \ (a>0,b>0)$
+    
+        \item { 推广：$ a_1,a_2,a_3,\cdots,a_n$是$n$个正数，则$\displaystyle \frac{a_1,a_2,a_3,\cdots,a_n}{n}$称为这$n$个正数的算术平均数,
+        $\sqrt[n]{a_1\cdot a_2\cdot a_3\cdot \cdots \cdot a_n}$称为这个正数的几何平均数，
+        它们的关系是：$\displaystyle \frac{a_1,a_2,a_3,\cdots,a_n}{n} \ge \sqrt[n]{a_1\cdot a_2\cdot a_3\cdot \cdots \cdot a_n}$，当且仅当$  a_1=a_2=a_3=\cdots=a_n$时等号成立。}
+    \end{enumerate}
+\end{enumerate}
+
+
+\begin{tcolorbox} 
+题型一:基本不等式基本应用
+\end{tcolorbox}
+\par
+\begin{problem}
+    设$x>0$，证明$\displaystyle x+\frac{1}{x} \ge 2$，并指出等号成立条件
+    \begin{jiexi}
+        因为$x>0$,有平均值不等式得:
+        $$x+\frac{1}{x} \ge 2\sqrt{x\cdot\frac{1}{x}} = 2$$
+        当$x=\frac{1}{x}$,即$x=1$时等号成立.
+    \end{jiexi}
+\end{problem}
+
+\par
+\begin{problem}
+    证明：若$ a<0$，则$\displaystyle a+\frac{1}{a} \le -2$，并指出等号成立条件。
+    \begin{jiexi}
+       根据题意,$a<0$,则$-a>0$,左式$\displaystyle =a+\frac{1}{a}=-[(-a)+(-\frac{1}{a})]$,\\
+       又由$\displaystyle (-a)+(-\frac{1}{a})\ge 2\sqrt{(-a)\cdot(-\frac{1}{a})} = 2$,则有$a+\frac{1}{a}\le -2$,当且仅当$a=-1$时,等号成立
+    \end{jiexi}
+\end{problem}
+
+\par
+\begin{problem}
+    $x \ne 0,x\in R,$，则$\displaystyle =x+\frac{1}{x}$的取值范围\tiankong{$(-\infty,-2]\cup[2,+\infty)$}
+\end{problem}
+
+
+
+\begin{tcolorbox} 
+题型二:配凑法
+\tcblower %增加了一条虚线
+$$x+\frac{1}{x+a} \quad \Rightarrow \quad x+a+\frac{1}{x+a}-a$$
+$$x(x-bx) \quad \Rightarrow \quad bx(a-bx)\cdot \frac{1}{b} $$
+\end{tcolorbox}
 
 
 \end{document}
