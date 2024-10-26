@@ -10,6 +10,9 @@
 \usepackage{geometry}
 \usepackage{pgfplots}
 \usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+
 
 \usepackage{tcolorbox}
 \usepackage{colortbl}
@@ -49,6 +52,7 @@
 
 \begin{document}
 \newtheorem{problem}{例}[section]
+\newtheorem{hmwk}{}
 \setlength{\parindent}{0em}
 
 
@@ -286,14 +290,17 @@ $
     \begin{enumerate}
         \item 加权平均$\ge$ 算术平均$\ge$ 几何平均：$\displaystyle \sqrt{\frac{a^2+b^2}{2}}\ge \frac{a+b}{2} \ge \sqrt{ab} , \ (a>0,b>0)$
     
-        \item { 推广：$ a_1,a_2,a_3,\cdots,a_n$是$n$个正数，则$\displaystyle \frac{a_1,a_2,a_3,\cdots,a_n}{n}$称为这$n$个正数的算术平均数,
+        \item { 推广：$ a_1,a_2,a_3,\cdots,a_n$是$n$个正数，则$\displaystyle \frac{a_1,a_2,a_3,\cdots,a_n}{n}$称为这$n$个正数的算术平均数,\\ 
         $\sqrt[n]{a_1\cdot a_2\cdot a_3\cdot \cdots \cdot a_n}$称为这个正数的几何平均数，
-        它们的关系是：$\displaystyle \frac{a_1,a_2,a_3,\cdots,a_n}{n} \ge \sqrt[n]{a_1\cdot a_2\cdot a_3\cdot \cdots \cdot a_n}$，当且仅当$  a_1=a_2=a_3=\cdots=a_n$时等号成立。}
+        它们的关系是：
+        $$\displaystyle \frac{a_1,a_2,a_3,\cdots,a_n}{n} \ge \sqrt[n]{a_1\cdot a_2\cdot a_3\cdot \cdots \cdot a_n}$$
+        当且仅当$  a_1=a_2=a_3=\cdots=a_n$时等号成立。}
     \end{enumerate}
 \end{enumerate}
 
 
 \begin{tcolorbox} 
+\centering
 题型一:基本不等式基本应用
 \end{tcolorbox}
 \par
@@ -393,6 +400,7 @@ $
 
 
 \begin{tcolorbox} 
+\centering
 题型二:配凑法
 \tcblower %增加了一条虚线
 $$x+\frac{1}{x+a} \quad \Rightarrow \quad x+a+\frac{1}{x+a}-a$$
@@ -427,6 +435,7 @@ $$x(x-bx) \quad \Rightarrow \quad bx(a-bx)\cdot \frac{1}{b} $$
 \end{problem}
 
 \begin{tcolorbox} 
+    \centering
     题型三:换元法
     \tcblower %增加了一条虚线
     \begin{enumerate}
@@ -464,6 +473,7 @@ $$x(x-bx) \quad \Rightarrow \quad bx(a-bx)\cdot \frac{1}{b} $$
 
 
 \begin{tcolorbox} 
+    \centering
     题型四:“1”的代换(齐次化)
     \tcblower %增加了一条虚线
     题目已知$x+y=m$，求$\displaystyle \frac{a}{x}+\frac{b}{y}$\quad 或\quad 已知$\displaystyle \frac{a}{x}+\frac{b}{y}=m$，求$x+y$时\\
@@ -538,6 +548,7 @@ $$x(x-bx) \quad \Rightarrow \quad bx(a-bx)\cdot \frac{1}{b} $$
 
 
 \begin{tcolorbox} 
+    \centering
     题型五:消元法
     \tcblower %增加了一条虚线
     (1)写：根据问题形式写出基本不等式\\
@@ -588,8 +599,27 @@ $$x(x-bx) \quad \Rightarrow \quad bx(a-bx)\cdot \frac{1}{b} $$
 
 
 \begin{tcolorbox} 
+    \centering
     题型六:基本不等式的应用
 \end{tcolorbox}
+
+\par
+\begin{problem}
+    在城市旧城改造中，某小区为了升级居住环境，拟在小区的闲置地中规划一个面积为$200m^2$的矩形区域（如图所示），按规划要求：在矩形内的四周安排$2m$宽的绿化，绿化造价为200元/$m^2$，中间区域地面硬化以方便后期放置各类健身器材，硬化造价为100元/$m^2$．设矩形的长为$x(m)$．\\
+    \includegraphics[scale=1.0]{pictures/image1.png}\\
+    （1）设总造价$y$（元）表示为长度$x(m)$的函数；\\
+    （2）当$x(m)$取何值时，总造价最低，并求出最低总造价．\\
+    \begin{jiexi}
+        （1）由矩形的长为$x$，则矩形的宽为$\displaystyle \frac{200}{x}$，
+则中间区域的长为$x-4$，宽为$\displaystyle \frac{200}{x}-4$，则定义域为$x\in(4,50)$，
+则$\displaystyle y=100\times[(x-4)(\frac{200}{x}-4)]+200[200-(x-4)(\frac{200}{x}-4)]$，
+整理得$\displaystyle y=18400+400(x+\frac{200}{x}),x\in(4,50)$．\\
+（2）$\displaystyle x+\frac{200}{x}\ge 2\sqrt{x\cdot\frac{200}{x}}=20\sqrt{2}$，当且仅当$\displaystyle x=\frac{200}{x}$时取等号，即$x=10\sqrt{2}\in (4,50)$，
+所以当$x=10\sqrt{2}$时，总造价最低为$18400+8000\sqrt{2}$元．
+    \end{jiexi}
+\end{problem}
+
+
 
 \par
 \begin{problem}
@@ -600,12 +630,162 @@ $$x(x-bx) \quad \Rightarrow \quad bx(a-bx)\cdot \frac{1}{b} $$
 \end{problem}
 
 
+\begin{tcolorbox} 
+    \centering
+题型七:综合题
+\end{tcolorbox}
+
+\par
+\begin{problem}
+    设实数$x,y$满足$2x+y=1$．
+    \begin{enumerate}
+        \item 求$4x2+y2+3xy$的最小值
+        \item 若$x>0,y>0$，求$\displaystyle \frac{1}{x}+\frac{2}{y}-\sqrt{2xy}$的最小值
+    \end{enumerate}
+    \begin{jiexi}
+        （I）因为$2x+y=1$，则$y=1﹣2x$，
+所以$4x^2+y^2+3xy=4x^2+(1﹣2x)^2+3x(1﹣2x)=4x2+1+4x2﹣4x+3x﹣6x2=2x2﹣x+1$，
+当$x=\frac{1}{4}$时，$\displaystyle 2(x-\frac{1}{4})^2+\frac{7}{8}$取得最小值，最小值为$\frac{7}{8}$，
+所以当$\displaystyle x=\frac{1}{4},y=\frac{1}{2}$时，$4x^2+y^2+3xy$ 取得最小值$\displaystyle \frac{7}{8}$．\\
+（II）因为$x>0,y<0,2x+y=1,$
+所以$\displaystyle (\frac{1}{x}+\frac{2}{y})=(\frac{1}{x}+\frac{2}{y})(2x+y)=4+\frac{y}{x}+\frac{4x}{y}\ge4+2\sqrt{\frac{y}{x}\cdot\frac{4x}{y}}=4$，
+当且仅当 $\displaystyle \frac{y}{x}=\frac{4x}{y}$，即$\displaystyle 2x=y=\frac{1}{2}$ 时取等号，
+又因为$2x+y\ge2\sqrt{2x\cdot y}=2\sqrt{2xy}$，
+所以$\displaystyle -\sqrt{2xy}\ge -\frac{2x+y}{2}=-\frac{1}{2}$，当且仅当$\displaystyle 2x=y=\frac{1}{2}$ 时等号成立，
+所以$\displaystyle \frac{1}{2}+\frac{2}{y}-\sqrt{2xy}\ge8-\frac{1}{2}=\frac{15}{2}$，当且仅当$2x=y=\frac{1}{2}$ 时等号成立，
+所以$\displaystyle \frac{1}{x}+\frac{2}{y}-\sqrt{2xy}$ 的最小值为$\displaystyle \frac{15}{2}$．
+    \end{jiexi}
+\end{problem}
+
+\par
+\begin{problem}
+    若实数$x、y、m$满足$|x-m|<|y-m|$，则称x比y更接近m．
+    \begin{enumerate}
+        \item 若4比$x^2-3x$更接近0，求x的取值范围
+        \item 对任意两个不相等的正数a、b，判断并证明：$(a+b)$和$\displaystyle (\frac{b^2}{a^2}+\frac{a^2}{b^2})$哪个更接近$2\sqrt{ab}$
+    \end{enumerate}
+    \begin{jiexi}
+        \includegraphics[scale=1.3]{pictures/image2.png}\\
+    \end{jiexi}
+\end{problem}
+
 \begin{formal}
     {\large \textbf{知识点二、三角不等式}}
 \end{formal}
 三角不等式：两个实数和的绝对值小于等于他们绝对值的和，
 即对于任意给定的实数$a,b$，有$$|a+b|\le|a|+|b|$$且等号当且仅当$ab\ge0$时成立\\
-如果$a,b$是实数，那么$||a|-|b||\le|a\pm b|\le |a|+|b|$\\
-推论：$|a_1+a_2+\cdots+a_n|\le |a_1|+|a_2|+\cdots+|a_n|$
+如果$a,b$是实数，那么
+
+\begin{enumerate}
+    \item $||a|-|b||\le|a+b|\le |a|+|b|$且左等号当且仅当$ab\le0$时成立；且右等号当且仅当$ab\ge0$时成立
+    \item $||a|-|b||\le|a-b|\le |a|+|b|$且左等号当且仅当$ab\ge0$时成立；且右等号当且仅当$ab\le0$时成立
+\end{enumerate}
+
+推论：$|a_1+a_2+\cdots+a_n|\le |a_1|+|a_2|+\cdots+|a_n|$,当且仅当$ab\ge0$时成立
+
+
+\begin{tcolorbox} 
+    \centering
+    综合题
+    \tcblower %增加了一条虚线
+    使用三角不等式或者前面学的绝对值不等式解题
+\end{tcolorbox}
+
+
+\par
+\begin{problem}
+    \begin{enumerate}
+        \item 写出不等式$|x+y|\le|x|+|y|$等号成立的一个充要条件是\tiankong{$xy\ge0\text{或}x=ky,k>0$},\\
+        一个充分非必要条件是\tiankong{$x=0$}，\\
+        一个必要非充分条件是\tiankong{$xy\ge-1$}；
+        \item 写出不等式$|x|-|y|\le|x-y|$等号成立的一个充要条件是\tiankong{$xy\ge y^2$}
+        \item 写出不等式$|x|-|y|\le|x+y|$等号成立的一个充要条件是\tiankong{$xy+y^2\le 0$}
+        \item 写出不等式$|x-y|\le|x|+|y|$等号成立的一个充要条件是\tiankong{$xy\le 0$}
+    \end{enumerate}
+\end{problem}
+
+\par
+\begin{problem}
+    代数式$y=|x-4|+|x-6|$的最小值为\tiankong{2}
+\end{problem}
+
+\par
+\begin{problem}
+    已知 $\displaystyle |x|<\frac{a}{4},|y|<\frac{a}{6}.$求证:$|2x-3y|<a$
+\end{problem}
+
+\par
+\begin{problem}
+    已知 $\displaystyle |x-a|<\frac{c}{2},|y-b|<\frac{c}{2}$，求证$|(x+y)-(a+b)|<c$ 
+\end{problem}
+
+\par
+\begin{problem}
+    $x$为实数，且$|x-5|+|x-3|<m$有解，则$m$的取值范围是\tiankong{$(2,+\infty)$}
+\end{problem}
+
+\par
+\begin{problem}
+    不等式$|x-a|+|x-3|>4$对一切实数x恒成立，求实数a的取值范围\tiankong{$(-\infty,-1)\cup(7,+\infty)$}
+\end{problem}
+
+\par
+\begin{problem}
+    若关于x的不等式$|x-1|+|ax-1|\ge2x$对于任意$x>0$恒成立，则实数a的取值范围是\tiankong{$(-\infty,-1]\cup[3,+\infty)$} 
+\end{problem}
+
+\par
+\begin{problem}
+    若对任意$a\in(1,+\infty)$，存在实数$x$，使得$\displaystyle |x-a|-|x+\frac{1}{a-1}|+x^2+a^2\le 2ax+a+m$成立，则实数$m$的最小值是\tiankong{$-2-2\sqrt{2}$}
+    \begin{jiexi}
+        对任意$a\in(1,+\infty)$，存在实数$x$，使得$\displaystyle |x-a|-|x+\frac{1}{a-1}|+(x-a)^2\le a+m$成立，
+因为$\displaystyle |x-a|-|x+\frac{1}{a-1}|+(x-a)^2\ge -|a+\frac{1}{a-1}|$，当且仅当$x=a$时等号成立，
+所以有$-|a+\frac{1}{a-1}|$对任意$a\in(1,+\infty)$恒成立，
+即$\displaystyle -m\le 2a+\frac{1}{a-1}=2(a-1)+\frac{1}{a-1}+2$对任意$a\in(1,+\infty)$恒成立，
+由于$\displaystyle 2(a-1)+\frac{1}{a-1}+2\ge 2\sqrt{2}+2$，当且仅当$\displaystyle 2(a-1)=\frac{1}{a-1}$，即$\displaystyle a=\frac{\sqrt{2}}{2}+1$时等号成立；
+所以$-m\le2\sqrt{2}+2$，即$m\ge -2\sqrt{2}-2$.所以实数m的最小值是$-2\sqrt{2}-2$
+    \end{jiexi}
+\end{problem}
+
+\clearpage
+\textbf{【课后作业】}\\
+\textbf{一、填空题：本大题共12小题，每小题5分，共60分.把答案填在答题卡中的横线上}
+
+\begin{hmwk}
+    （2010·湖北·一模）当$x>1$时，$\displaystyle x+\frac{4}{x-1}$的最小值为\tiankong{5}
+\end{hmwk}
+
+\begin{hmwk}
+    （22-23高一上·湖北武汉·期中）若实数$x>1,y>1,$且$x+2y=5$，则$\displaystyle \frac{1}{x-1}+\frac{1}{y-1}$的最小值为\tiankong{$\displaystyle \frac{3}{2}+\sqrt{2}$}
+\end{hmwk}
+
+\begin{hmwk}
+    （2023·山西大同·模拟预测）已知$\displaystyle a>0,b>0,a\ge \frac{1}{a}+\frac{2}{b},b \ge \frac{1}{b}+\frac{2}{a}$，则$a+b$的最小值为\tiankong{$2\sqrt{3}$}
+    \begin{jiexi}
+    $\displaystyle a+b \ge \frac{3}{a}+\frac{3}{b}$,又$a>0,b>0,$
+    所以$\displaystyle (a+b)^2 \ge (\frac{3}{a}+\frac{3}{b})(a+b)=6+\frac{3b}{a}+\frac{3a}{b}\ge 12$，当且仅当$a=b=\sqrt{3}$时取等号．
+    所以$a+b\ge2\sqrt{3}$，当且仅当$a=b=\sqrt{3}$时取等号．
+    \end{jiexi}
+\end{hmwk}
+
+\begin{hmwk}
+    （23-24高一上·广东河源·阶段练习）若正数$x,y$满足$\displaystyle \frac{1}{x}+\frac{8}{y}=1$，则$x+2y$的最小值为\tiankong{25}
+\end{hmwk}
+
+\begin{hmwk}
+    （23-24高一下·河北·期末）已知$a>0,b>0$，且$9a+b=ab$，则$a+4b$的最小值为\tiankong{49}
+\end{hmwk}
+
+\begin{hmwk}
+    （23-24高一下·云南曲靖·阶段练习）已知$x>0,y>0$，且$x+y=3$，则$\displaystyle \frac{y}{x+1}+\frac{1}{y}$的最小值为\tiankong{$\frac{5}{4}$}
+\end{hmwk}
+
+\begin{hmwk}
+    （24-25高一上·全国·课前预习）若不等式$\displaystyle \frac{x}{x^2+3x+1}\le a$对一切正实数x都成立，则实数a的取值范围是\tiankong{$[\frac{1}{5},+\infty)$}
+\end{hmwk}
+
+\begin{hmwk}
+    （23-24高二下·浙江绍兴·期中）已知$a>0,b>0$，且$a+2b=1$，则$\displaystyle \frac{1}{b}+\frac{8}{a+b}$的最小值为\tiankong{$9+4\sqrt{2}$}
+\end{hmwk}
 
 \end{document}
