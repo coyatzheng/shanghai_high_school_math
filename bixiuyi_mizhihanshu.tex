@@ -1,0 +1,217 @@
+\section{第9课\quad 幂、指数与对数}
+\classinfo{G1}{幂、指数与对数}{掌握幂指对数的性质和运算}{幂、指数与对数}
+
+\begin{formal}
+    {\large \textbf{知识点一、幂与指数}}
+\end{formal}
+指数幂的拓展
+\begin{enumerate}
+    \item 幂的有关概念：$a$的$n$次方叫做$a$的$n$次幂，记作$a^n$.称$a$为幂的底数（简称为底），$n$为幂的指数.
+    对任意给定的实数$a,b$及正整数$s,t$都有$a^sa^t=a^{s+t};(a^s)^t=a^{st};(ab)^t=a^tb^t$成立.\\
+    定义：$\displaystyle a^0=1(a \ne 0),a^{-n}=\frac{1}{a^n}(a \ne 0)$\\
+    整数指数幂：对任意给定的非零实数a,b及整数s,t,$a^sa^t=a^{s+t};(a^s)^t=a^{st};(ab)^t=a^tb^t$\\
+    分数指数幂：$\displaystyle a^{\frac{m}{n}}=\sqrt[n]{a^m}(a>0, \quad m,n \text{为正整数且}n>1)$\\
+    有理指数幂：$\displaystyle a^{-\frac{m}{n}}=\frac{1}{a^{\frac{m}{n}}}=\frac{1}{\sqrt[n]{a^m}}(a>0, \quad m,n \text{为正整数且}n>1)$
+    \item 根式的概念:一般地，如果n为大于 1 的整数，且$x^n =a$那么x叫做a的n次方根(负数没有偶次方根).\ a
+    的n次方根$\displaystyle =\left\{
+        \begin{aligned}
+        &\sqrt[n]{a}\ & (n\text{为奇数}) \\
+        &\pm \sqrt[n]{a}\ & (n\text{为偶数},a>0)
+        \end{aligned}
+        \right. ,$\ $\sqrt[n]{0}=0$.
+    \item 式子$\sqrt[n]{a}$叫做根式，这里n叫做根指数，a叫做被开方数.
+    当n为奇数时，$\sqrt[n]{a^n}=a$；当n为偶数时,$\sqrt[n]{a^n}=|a|$.
+    \item 对任意给定的正实数ab,及有理数$s,t,\quad a^sa^t=a^{s+t};(a^s)^t=a^{st};(ab)^t=a^tb^t$
+    \item \textbf{定理 当$a>1,s>0$时,$a^s>1$恒成立}
+\end{enumerate}
+
+
+
+\begin{formal}
+    {\large \textbf{知识点二、对数}}
+\end{formal}
+
+\begin{enumerate}
+    \item 定义:在$a>0,a\ne1,$且$N>0$的条件下，唯一满足$a^x=N$的数$x$，称为$N$
+    以$a$为底的对数（logarithm），并用符号$\log_a {N}$表示，而$N$称为真数(N永远是正数,零和负数没有对数)
+    $$\log_a{1}=0,\log_a{a}=1(a>0,a\ne1),\quad \text{记} \log_{10}{N}=\lg{N},\quad \log_e{N}=\ln{N}(\text{无理数}e=2.71828\cdots)$$
+    \item 指数式与对数式的关系：$a^b=N \Leftrightarrow \log_a{N}=b(a>0,a\ne1,N>0)$
+    \item 对数的运算规则,$M>0,N>0,c\in R$
+    \begin{enumerate}
+        \item $\log_a{MN}=\log_a{M}+\log_a{N}$
+        \item $\log_a{\frac{M}{N}}=\log_a{M}-\log_a{N}$
+        \item $\log_a{N^c}=c\log_a{N}$
+        \item 对数换底公式:\quad $\displaystyle \log_b{N}=\frac{\log_a{N}}{\log_a{b}}$
+        $$\log_{a^m}{M^n}=\frac{n}{m}\log_a{M};\ \quad \log_a{b}=\frac{1}{\log_b{a}};\ \quad \log_a{b}\cdot \log_b{c}\cdot \log_c{d} = \log_a{d}$$
+    \end{enumerate}
+\end{enumerate}
+
+\begin{tcolorbox} 
+    \centering
+    题型一:概念,性质,运算
+    % \tcblower %增加了一条虚线
+\end{tcolorbox}
+
+\begin{problem}
+    （1）−125的立方根为\tiankong{$-5$}；（2）64 的 6 次方根为\tiankong{$\pm2$}；（3）$\sqrt{16}$的平方根为\tiankong{$\pm2$}（4）$\sqrt{16}$的算数平方根为\tiankong{$2$}
+\end{problem}
+
+\begin{problem}
+    计算（1）$\sqrt[5]{(-3)^5}$\tiankong{$-3$}；（2）$\sqrt[3]{(-3)^6}$\tiankong{$9$}；（3）$\displaystyle \sqrt[4]{(\frac{1}{a}-\frac{1}{b})^4}\ (a>b>0)=$\tiankong{$\displaystyle |\frac{1}{a}-\frac{1}{b}|=\frac{1}{b}-\frac{1}{a}$}
+    （4）$\sqrt{(a-b)^2}=$\tiankong{$|a-b|$}
+\end{problem}
+
+\begin{problem}
+    计算（1）$\displaystyle 8^{-\frac{2}{3}}$；（2）$\displaystyle \sqrt[5]{(\frac{243}{32})^2}$\tiankong{$9$}；
+    \begin{jiexi}
+        $\displaystyle (1) 8^{-\frac{2}{3}}=\frac{1}{8^{\frac{2}{3}}}=\frac{1}{(2^3)^{\frac{2}{3}}}=\frac{1}{2^2}=\frac{1}{4}\quad (2)\sqrt[5]{(\frac{243}{32})^2}=(\frac{243}{32})^{\frac{2}{5}}=\left[
+            (\frac{3}{2})^5
+            \right]^{\frac{2}{5}}=(\frac{3}{2})^2=\frac{9}{4} $
+    \end{jiexi}
+\end{problem}
+
+\begin{problem}
+    用有理数指数幂的形式表示下列各式$(x>0,y>0)$.
+    $$(1)\sqrt{x^3};\quad (2)\sqrt[3]{x^2};\quad(3)\frac{1}{\sqrt[3]{a}}; \quad (4)\sqrt[4]{(a+b)^3}; \quad (5)\frac{\sqrt{x}}{\sqrt[3]{y^2}} $$
+    \begin{jiexi}
+        $$x^{\frac{3}{2}};x^{\frac{2}{3}};a^{-\frac{1}{3}};(a+b)^{-\frac{3}{4}};x^{\frac{1}{2}}y^{-\frac{2}{3}}$$
+    \end{jiexi}
+\end{problem}
+
+\begin{problem}
+    化简下列各式$(x>0,y>0,m>0)$.
+    $$(1)\frac{5x^{-\frac{2}{3}}y^{\frac{1}{2}}}{(-\frac{1}{4}x^{-1}y^{\frac{1}{2}})(-\frac{5}{6}x^{\frac{1}{3}}y^{-\frac{1}{6}})};\quad 
+    (2)\frac{m+m^{-1}+2}{m^{-\frac{1}{2}}+m^{\frac{1}{2}}};\quad
+    (3)\sqrt[4]{81\times\sqrt{9^{\frac{2}{3}}}}; \quad 
+    (4)(\frac{8x^{-3}}{27y^6})^{-\frac{1}{3}}; \quad 
+    (5)\frac{\sqrt{x^3}\sqrt{x^2}}{x^6\sqrt{x}} $$
+    \begin{jiexi}
+        $$(1)24y^{\frac{1}{6}};(2)m^{\frac{1}{2}}+m^{-\frac{1}{2}};(3)3^{\frac{7}{6}};
+        (4)\frac{3}{2}xy^2;(5)x^{-4}$$
+    \end{jiexi}
+\end{problem}
+
+\begin{problem}
+    与$\displaystyle a\sqrt{-\frac{1}{a}}$的值相等的是\xuanze{D}\\
+    \fourchoice{$\sqrt{a}$}{$-\sqrt{a}$}{$\sqrt{-a}$}{$-\sqrt{-a}$}
+\end{problem}
+
+\begin{problem}
+    化简$\displaystyle \frac{\sqrt{-x^3}}{x}$的结果是\xuanze{A}\\
+    \fourchoice{$-\sqrt{-x}$}{$\sqrt{x}$}{$-\sqrt{x}$}{$\sqrt{-x}$}
+\end{problem}
+
+\begin{problem}
+    已知$\displaystyle a+\frac{1}{a}=3,$则
+    $\displaystyle a^{\frac{1}{2}}+a^{-\frac{1}{2}}=$\tiankong{$\sqrt{5}$};
+    $\displaystyle a^{\frac{1}{2}-a^{-\frac{1}{2}}}=$\tiankong($\pm 1$)
+    $\displaystyle a^{\frac{3}{2}}-a^{-\frac{3}{2}}=$\tiankong{$\pm 4$}\\
+\end{problem}
+
+\begin{problem}
+    已知$\displaystyle 0<a<1,s>0,$求证:$0<a^s<1$
+    \begin{jiexi}
+        $$\because 0<a<1 \therefore \frac{1}{a}>1,\text{又}s>0,\text{所以}(\frac{1}{a})^s>1 
+        \Rightarrow \frac{1}{a^s}>1 \Rightarrow 0<a^s<1$$
+    \end{jiexi}
+\end{problem}
+
+\begin{problem}
+    计算$\displaystyle (1)\log_9{27};(2)\log_{\sqrt[4]{3}}{81};
+    (3)\log_{2+\sqrt{3}}{(2-\sqrt{3})};(4)\log_{\sqrt[3]{5^4}}{625};(5)100^{1-log_{10}{\frac{5}{2}}}$
+    \begin{jiexi}
+            $\displaystyle (1)\frac{3}{2};(2)16;(3)\log_{2+\sqrt{3}}{2-\sqrt{3}}=\log_{2+\sqrt{3}}{(2+\sqrt{3})^{-1}}=-1;
+            \\ (4)\log_{\sqrt[3]{5^4}}{625}=\log_{5^{\frac{4}{3}}}{5^4}=3;
+            (5)=100 / 100^{\log_{10}{\frac{5}{2}}}=100 / (10^{\log_{10}{\frac{5}{2}}})^2=100/(\frac{5}{2})^2=16$
+    \end{jiexi}
+\end{problem}
+
+\begin{problem}
+    计算$(1)(\lg2)^2+\lg2\cdot\lg{50}+\lg{25};\\
+    (2)(\log_3{2}+\log_9{2})\cdot(\log_4{3}+\log_8{3})$
+    \begin{jiexi}
+        $$(\lg2)^2+(1+\lg5)\lg2+\lg{5^2}=(\lg2+\lg5+1)\lg2+2\lg5=(1+1)lg2+2\lg5=2(\lg2+\lg5) = 2$$
+        $$(\frac{\lg2}{\lg3}+\frac{\lg2}{\lg9})\cdot(\frac{\lg3}{\lg4}+\frac{\lg3}{\lg8})=
+        (\frac{\lg2}{\lg3}+\frac{\lg2}{2\lg3})\cdot(\frac{\lg3}{2\lg2}+\frac{\lg3}{3\lg2})=\frac{3\lg2}{2\lg3}\cdot\frac{5\lg3}{6\lg2}=\frac{5}{4}$$
+    \end{jiexi}
+\end{problem}
+
+\begin{problem}
+    计算$\displaystyle (1)\log_6^2{3}+\frac{\log_6{18}}{\log_2{6}};
+    (2)7^{\lg{30}}\cdot (\frac{1}{3})^{\lg{0.7}};
+    (3)a^{log_m{b}}\cdot b^{\log_m{\frac{1}{a}}}$
+    \begin{jiexi}
+        $(1)=\log_6^2{3}+(\log_6{3}+\log_6{6})\cdot\log_6{2}=\\ \log_6^2{3}+\log_6{3}
+        \cdot\log_6{2}+\log_6{2}=\log_6{3}(\log_6{3}+\log_6{2})+\log_6{2}=1$
+        \\ (2)设$\displaystyle x=7^{\lg{30}}\cdot (\frac{1}{3})^{\lg{0.7}}$,两边取对数得:
+        $\displaystyle \lg{x}=\lg{7^{\lg{30}}}+\lg{(\frac{1}{3})^{\lg{0.7}}}=(\lg{3}+\lg{10})\lg{7}+(\lg{7}-\lg{10})(-\lg{3})=
+        \lg3\cdot\lg7+\lg7-\lg7\lg3+\lg3=\lg{21}$\\
+        所以$x=21$,即$\displaystyle 7^{\lg{30}}\cdot(\frac{1}{3})^{\lg{0.7}}=21$\\
+        (3)设$x=a^{\log_m{b}}\cdot b^{\log_m{\frac{1}{a}}}$,两边取以m为底的对数得:$\log_m{x}=\log_m{b}\cdot \log_m{a}+\log_m{\frac{1}{a}}\cdot\log_m{b}=\log_m{b}\cdot\log_m{a}-\log_m{a}\cdot\log_m{b}=0$\\
+        所以$x=1$,即$a^{\log_m{b}}\cdot b^{\log_m{\frac{1}{a}}}=1$
+    \end{jiexi}
+\end{problem}
+
+
+\begin{tcolorbox}
+    \centering
+    题型二:综合题
+    % \tcblower %增加了一条虚线
+\end{tcolorbox}
+
+\begin{problem}
+    求下列各式中的实数x\\
+    $\displaystyle (1)(\sqrt{2}-1)^x=2;
+    (2)x^5=3;
+    (3)\log_{36}x=\frac{1}{4};
+    (4)\log_x{(\sqrt{3}+\sqrt{2})}=-1$;
+    \begin{jiexi}
+        $(1)x=\log_{(\sqrt{2}-1)}2; \ (2)x=\sqrt[5]{3}; \ (3)x=\sqrt{6}; \ (4)x=\sqrt{3}-\sqrt{2}$
+    \end{jiexi}
+\end{problem}
+
+\begin{problem}
+    \begin{enumerate}
+        \item 已知$\log_2{3}=a,\log_3{7}=b$,用$a,b$表示$\log_{42}{56}$
+        \item 已知$\lg2=a,\lg3=b$,用$a,b$表示$\lg5,\log_{12}{25}$
+    \end{enumerate}
+    \begin{jiexi}
+        $\displaystyle (1)\log_{42}{56}=\frac{\log_3{56}}{\log_3{42}}=\frac{\log_3{7}+3\times\log_3{2}}{\log_3{7}+\log_3{2}+1}=\frac{ab+3}{ab+b+1};$\\
+        $\displaystyle (2)\lg{5}=\lg{\frac{10}{2}}=1-\lg2=1-a;\ \log_{12}{25}=\frac{\lg{25}}{\lg{12}}=\frac{2\lg{5}}{\lg3+\lg4}=\frac{2(1-a)}{b+2a}$
+    \end{jiexi}
+\end{problem}
+
+\begin{problem}
+    已知$2^a=3,\log_3{5}=b,\text{则}\log_{15}{20}=$\tiankong{$\displaystyle \frac{ab+2}{ab+a}$}\ (用$a,b$表示)
+\end{problem}
+
+\begin{problem}
+    设$a,b,c\in R^+,$且$3a=4b=6c$,则以下四个式子中恒成立的是\xuanze{B}\\
+    \fourchoice{$\displaystyle \frac{1}{c}=\frac{1}{a}+\frac{1}{b}$}
+    {$\displaystyle \frac{2}{c}=\frac{2}{a}+\frac{1}{b}$}
+    {$\displaystyle \frac{1}{c}=\frac{2}{a}+\frac{2}{b}$}
+    {$\displaystyle \frac{2}{c}=\frac{1}{a}+\frac{2}{b}$}
+\end{problem}
+
+\begin{problem}
+    设$x,y,z\in R^+,$且$3^x=4^y=6^z$
+    \begin{enumerate}
+        \item 求证:$\displaystyle \frac{1}{x}+\frac{1}{2y}=\frac{1}{z}$
+        \item 比较$3x,4y,6z$的大小
+    \end{enumerate}
+\end{problem}
+
+\begin{problem}
+    (1980·全国)证明换底公式：当$N>0$时,$\displaystyle \log_bN=\frac{\log_aN}{\log_ab}$\\ 
+    \begin{jiexi}
+        $\displaystyle c=\log_bN,b^c=N\text{得}\log_aN=\log_a{b^c}=c\log_ab=\log_bN\cdot\log_ab \Rightarrow \log_bN=\frac{\log_aN}{\log_ab}.$
+    \end{jiexi}
+\end{problem}
+
+\begin{problem}
+    若$a>1,b>1,\log_2a\cdot\log_2b=16$,求$\log_2{ab}$的最小值
+    \begin{jiexi}
+        8
+    \end{jiexi}
+\end{problem}
+

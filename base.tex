@@ -8,7 +8,55 @@
 \usepackage[strict]{changepage} % 提供一个 adjustwidth 环境
 \usepackage{framed} % 实现方框效果
 
-\def\TeacherName{郑老师}
+\def\TeacherName{郑振宇}
+
+
+\usepackage{draftwatermark}         % 所有页加水印
+%\usepackage[firstpage]{draftwatermark} % 只有第一页加水印
+\SetWatermarkText{郑振宇}           % 设置水印内容
+%\SetWatermarkText{\includegraphics{fig/texlion.png}}         % 设置水印logo
+\SetWatermarkLightness{0.94}             % 设置水印透明度 0-1
+\SetWatermarkScale{0.4}                   % 设置水印大小 0-1  
+%
+
+%--------------------------------------选择题---------------------------
+\usepackage{ifthen}
+\newlength{\la}
+\newlength{\lb}
+\newlength{\lc}
+\newlength{\ld}
+\newlength{\lhalf}
+\newlength{\lquarter}
+\newlength{\lmax}
+\newcommand{\fourchoice}[4]{  
+\settowidth{\la}{A.~#1~~~}  
+\settowidth{\lb}{B.~#2~~~}  
+\settowidth{\lc}{C.~#3~~~}  
+\settowidth{\ld}{D.~#4~~~}  
+\ifthenelse{\lengthtest{\la > \lb}}  
+{\setlength{\lmax}{\la}}  
+{\setlength{\lmax}{\lb}}  
+\ifthenelse{\lengthtest{\lmax < \lc}}  
+{\setlength{\lmax}{\lc}}  {}  
+\ifthenelse{\lengthtest{\lmax < \ld}} 
+{\setlength{\lmax}{\ld}}  {}  
+\setlength{\lhalf}{0.5\linewidth}  
+\setlength{\lquarter}{0.25\linewidth}  
+\ifthenelse{\lengthtest{\lmax > \lhalf}} 
+{\noindent{}A.~#1 \\ B.~#2 \\ C.~#3 \\ D.~#4 }  
+{  \ifthenelse{\lengthtest{\lmax > \lquarter}}  
+{\noindent\makebox[\lhalf][l]{A.~#1~~~}%    
+\makebox[\lhalf][l]{B.~#2~~~}%    
+\makebox[\lhalf][l]{C.~#3~~~}%    
+\makebox[\lhalf][l]{D.~#4~~~}}%    
+{\noindent\makebox[\lquarter][l]{A.~#1~~~}%      
+\makebox[\lquarter][l]{B.~#2~~~}%      
+\makebox[\lquarter][l]{C.~#3~~~}%      
+\makebox[\lquarter][l]{D.~#4~~~}}}}
+%-----------------------------------------------------------------------
+
+
+
 
 % environment derived from framed.sty: see leftbar environment definition
 \definecolor{formalshade}{rgb}{0.95,0.95,1} % 文本框颜色
@@ -52,6 +100,13 @@
 
 \newif\ifprint
 
+\newcommand{\xuanze}[1]{\ (
+\ifprint
+\ #1
+\else
+\hspace*{4em}
+\fi)}
+
 \newcommand{\tiankong}[1]{\ \underline{
 \ifprint
 \ #1
@@ -70,7 +125,7 @@
 }{\par}
 
 \newif\ifshowanswer
-\showanswerfalse %答案控制看这里
+\showanswertrue %答案控制看这里
 
 \ifshowanswer
 \printtrue
